@@ -3,11 +3,11 @@
 
 /* Variáveis de cores */
 :root {
-    --branco: white;
-    --cor-de-fundo: #482661; /* Roxo mais fechado (Indigo) */
-    --fundo-senha: #d1b8e6; /* Lilás */
-    --fundo-texto: #392353; /* Verde mais escuro */
-    --borda: #52336e; /* Verde limão */
+    --preto: #3e245c; /* Cor preta */
+    --cor-de-fundo: #5d446e; /* Roxo mais fechado (Indigo) */
+    --fundo-senha: #D8B9F2; /* Lilás */
+    --fundo-texto: lab(58.23% 18.63 -27.99); /* Verde mais escuro */
+    --borda: #753b83; /* Verde limão */
     --roboto: 'Open Sans', sans-serif;
     --roboto-mono: 'Roboto Mono', monospace;
 }
@@ -22,7 +22,7 @@
 }
 
 body {
-    color: var(--branco);
+    color: var(--preto); /* Texto preto */
     background-color: var(--cor-de-fundo); /* Fundo roxo mais fechado */
     font-family: var(--roboto);
 }
@@ -37,12 +37,12 @@ body {
 .titulo-principal {
     font-family: var(--roboto-mono);
     font-size: 32px;
-    color: var(--borda); /* Verde limão para o título principal */
+    color: var(--preto); /* Fonte preta para o título principal */
 }
 
 .titulo-secundario {
     font-size: 24px;
-    color: var(--borda); /* Verde limão para o título secundário */
+    color: var(--preto); /* Fonte preta para o título secundário */
 }
 
 /* Conteúdo de título */
@@ -51,7 +51,7 @@ body {
     margin-top: 80px;
 }
 
-/* Seção de senha */
+/* Seção de senha gerada */
 .conteudo-senha {
     margin-top: 80px;
     background: var(--fundo-senha); /* Lilás */
@@ -62,7 +62,7 @@ body {
 #campo-senha {
     background-color: var(--fundo-senha);
     border: none;
-    color: var(--branco);
+    color: var(--preto); /* Texto preto */
     font-family: var(--roboto-mono);
     font-size: 40px;
     width: 70%;
@@ -83,26 +83,37 @@ body {
 .parametro-titulo {
     font-family: var(--roboto-mono);
     font-size: 28px;
-    color: var(--branco); /* Branco para os títulos dos parâmetros */
+    color: var(--preto); /* Fonte preta para os títulos dos parâmetros */
 }
 
 /* Parâmetros específicos da senha */
 .parametro-senha__titulo {
     font-size: 24px;
-    color: var(--branco); /* Branco para os títulos de senha */
+    color: var(--preto); /* Fonte preta para os títulos de senha */
 }
 
-.parametro-coluna__senha {
+/* Organizando as colunas (lado a lado) */
+.parametro-coluna {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
 }
 
-.parametro-senha {
-    width: 50%;
-    margin: 0 auto;
+/* Lado esquerdo: Características da senha */
+.parametro-senha-left {
+    width: 48%;
 }
 
+/* Lado direito: Número de caracteres */
+.parametro-senha-right {
+    width: 48%;
+}
+
+/* Características da senha (checkboxes) */
+.parametro-senha-checkbox {
+    margin-bottom: 8px;
+}
+
+/* Número de caracteres */
 .parametro-senha-botoes {
     display: flex;
     justify-content: center;
@@ -110,7 +121,7 @@ body {
 
 .parametro-senha__botao {
     background-color: var(--fundo-texto); /* Verde mais escuro */
-    color: var(--branco);
+    color: var(--preto); /* Texto preto */
     border: 2px solid var(--borda); /* Verde limão */
     padding: 24px;
     font-size: 24px;
@@ -128,7 +139,7 @@ body {
 /* Elementos adicionais (checkboxes, labels, etc.) */
 label {
     font-size: 20px;
-    color: var(--branco); /* Branco para os labels */
+    color: var(--preto); /* Texto preto para os labels */
 }
 
 .checkbox {
@@ -172,8 +183,5 @@ label {
 }
 
 /* Responsividade */
-@media screen and (min-width: 768px) {
-    .parametro-coluna__senha {
-        flex-direction: row;
-    }
-}
+@media screen and (max-width: 768px) {
+    .
