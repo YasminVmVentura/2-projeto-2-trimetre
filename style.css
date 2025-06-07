@@ -4,10 +4,10 @@
 /* Variáveis de cores */
 :root {
     --branco: white;
-    --cor-de-fundo: #4B0082; /* Roxo mais fechado (Indigo) */
-    --fundo-senha: #D8B9F2; /* Lilás */
-    --fundo-texto: #3B5323; /* Verde mais escuro */
-    --borda: #32CD32; /* Verde limão */
+    --cor-de-fundo: #482661; /* Roxo mais fechado (Indigo) */
+    --fundo-senha: #d1b8e6; /* Lilás */
+    --fundo-texto: #392353; /* Verde mais escuro */
+    --borda: #52336e; /* Verde limão */
     --roboto: 'Open Sans', sans-serif;
     --roboto-mono: 'Roboto Mono', monospace;
 }
