@@ -1,44 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Mono&display=swap');
 
+/* Variáveis de cores */
 :root {
     --branco: white;
-    --cor-de-fundo: #00162E;
-    --fundo-senha: #00244D;
-    --fundo-texto: #001E40;
-    --borda: #0075FF;
-    --roboto: 'Roboto', sans-serif;
+    --cor-de-fundo: #4B0082; /* Roxo mais fechado (Indigo) */
+    --fundo-senha: #D8B9F2; /* Lilás */
+    --fundo-texto: #3B5323; /* Verde mais escuro */
+    --borda: #32CD32; /* Verde limão */
+    --roboto: 'Open Sans', sans-serif;
     --roboto-mono: 'Roboto Mono', monospace;
 }
 
+/* Regras globais */
 * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     font-weight: 400;
+    font-style: italic; /* Itálico aplicado a todos os textos */
 }
 
 body {
     color: var(--branco);
-    background-color: var(--cor-de-fundo);
+    background-color: var(--cor-de-fundo); /* Fundo roxo mais fechado */
     font-family: var(--roboto);
 }
 
+/* Estrutura geral do layout */
+.conteudo {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Títulos principais e secundários */
 .titulo-principal {
     font-family: var(--roboto-mono);
     font-size: 32px;
+    color: var(--borda); /* Verde limão para o título principal */
 }
 
 .titulo-secundario {
     font-size: 24px;
+    color: var(--borda); /* Verde limão para o título secundário */
 }
 
+/* Conteúdo de título */
 .conteudo-titulo {
     text-align: center;
     margin-top: 80px;
 }
 
+/* Seção de senha */
 .conteudo-senha {
     margin-top: 80px;
-    background: var(--fundo-senha);
+    background: var(--fundo-senha); /* Lilás */
     padding: 24px;
-    border-bottom: 6px solid var(--borda);
+    border-bottom: 6px solid var(--borda); /* Verde limão */
 }
 
 #campo-senha {
@@ -54,14 +72,10 @@ body {
     outline: none;
 }
 
-.conteudo {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
+/* Parâmetros de personalização */
 .parametro {
-    background-color: var(--fundo-texto);
-    border: 2px solid var(--borda);
+    background-color: var(--fundo-texto); /* Verde mais escuro */
+    border: 2px solid var(--borda); /* Verde limão */
     margin-top: 32px;
     padding: 24px;
 }
@@ -69,10 +83,13 @@ body {
 .parametro-titulo {
     font-family: var(--roboto-mono);
     font-size: 28px;
+    color: var(--branco); /* Branco para os títulos dos parâmetros */
 }
 
+/* Parâmetros específicos da senha */
 .parametro-senha__titulo {
     font-size: 24px;
+    color: var(--branco); /* Branco para os títulos de senha */
 }
 
 .parametro-coluna__senha {
@@ -92,9 +109,9 @@ body {
 }
 
 .parametro-senha__botao {
-    background-color: var(--fundo-texto);
+    background-color: var(--fundo-texto); /* Verde mais escuro */
     color: var(--branco);
-    border: 2px solid var(--borda);
+    border: 2px solid var(--borda); /* Verde limão */
     padding: 24px;
     font-size: 24px;
     cursor: pointer;
@@ -102,14 +119,16 @@ body {
 
 .parametro-senha__texto {
     padding: 24px;
-    border-top: 2px solid var(--borda);
-    border-bottom: 2px solid var(--borda);
+    border-top: 2px solid var(--borda); /* Verde limão */
+    border-bottom: 2px solid var(--borda); /* Verde limão */
     margin: 0;
     font-size: 24px;
 }
 
+/* Elementos adicionais (checkboxes, labels, etc.) */
 label {
     font-size: 20px;
+    color: var(--branco); /* Branco para os labels */
 }
 
 .checkbox {
@@ -118,8 +137,9 @@ label {
     cursor: pointer;
 }
 
+/* Barra de força da senha */
 .barra {
-    background-color: var(--fundo-senha);
+    background-color: var(--fundo-senha); /* Lilás */
     height: 30px;
     width: 100%;
 }
@@ -132,25 +152,26 @@ label {
 
 .fraca {
     width: 25%;
-    background-color: #E71B32;
+    background-color: #FF6347; /* Cor vermelha para força fraca */
 }
 
 .media {
-    background-color: #FAF408;
+    background-color: #FFD700; /* Cor amarela para força média */
     width: 50%;
 }
 
 .forte {
-    background-color: #00FF85;
+    background-color: #32CD32; /* Verde limão para força forte */
     width: 100%;
 }
 
+/* Texto da barra de força */
 .parametro-senha-textos {
     display: flex;
     justify-content: space-between;
 }
 
-
+/* Responsividade */
 @media screen and (min-width: 768px) {
     .parametro-coluna__senha {
         flex-direction: row;
